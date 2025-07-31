@@ -8,34 +8,35 @@ function generateUniqueRandomString(length = 16) {
   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   const timestamp = Date.now().toString(36); // Convert timestamp to base36 for compactness
   let randomStr = '';
-  
+
   for (let i = 0; i < length; i++) {
     randomStr += chars.charAt(Math.floor(Math.random() * chars.length));
   }
 
-  return ${timestamp}-${randomStr};
+  return `${timestamp}-${randomStr}`; // ✅ Use backticks for template string
 }
-  
-  const handleIndentify () => {
-    console.log("coming here ");
-  const id  = generateUniqueRandomString(10);
-    console.log(" id", id)
+
+const handleIdentify = () => {  // ✅ Fixed function syntax (was incorrect)
+  console.log("coming here");
+  const id = generateUniqueRandomString(10);
+  console.log("id", id);
+
   uzera("identify", {
-   id: id, // Replace with your unique user ID (required)
-   userData: {
-    // recommended properties for personalization (optional)
-    name: "John Doe", // current user's full name
-    email: "john@example.com", // Current user's email
-    join_date: "2023-05-17T08:42:25.253Z", // ISO format (ie.2023-05-17T08:42:25.253Z) of user signup date
-    plan: "Startup", // Current user's plan name
-    purchased_at: "2023-05-17T08:42:25.253Z", // ISO format (ie.2023-05-17T08:42:25.253Z) of account purchase date (leave null if empty)
-    role: "Manager", // Current user's role or permissions
-    account_id: "1234XYZ", // Current user's account ID
-    company_name: "Acme Corp", // Current user's company name
-    renewal_date: "2023-05-17T08:42:25.253Z", // ISO format (ie.2023-05-17T08:42:25.253Z) to remind users for renewal etc.
-  },
-});
-  }
+    id: id,
+    userData: {
+      name: "John Doe",
+      email: "john@example.com",
+      join_date: "2023-05-17T08:42:25.253Z",
+      plan: "Startup",
+      purchased_at: "2023-05-17T08:42:25.253Z",
+      role: "Manager",
+      account_id: "1234XYZ",
+      company_name: "Acme Corp",
+      renewal_date: "2023-05-17T08:42:25.253Z",
+    },
+  });
+};
+
   return (
     <>
       <Navbar />
