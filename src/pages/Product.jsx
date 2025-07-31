@@ -15,9 +15,42 @@ const Product = () => {
   const [loading2, setLoading2] = useState(false);
 
   const dispatch = useDispatch();
+  function generateUniqueRandomString(length = 16) {
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  const timestamp = Date.now().toString(36); // Convert timestamp to base36 for compactness
+  let randomStr = '';
 
-  const addProduct = (product) => {
+  for (let i = 0; i < length; i++) {
+    randomStr += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+
+  return `${timestamp}-${randomStr}`; // ✅ Use backticks for template string
+}
+
+const handleIdentify = () => {  // ✅ Fixed function syntax (was incorrect)
+  console.log("coming here" );
+  const id = generateUniqueRandomString(10);
+  console.log("id", id);
+
+  uzera("identify", {
+    id: id,
+    userData: {
+      name: "John Doe",
+      email: "john@example.com",
+      join_date: "2023-05-17T08:42:25.253Z",
+      plan: "Startup",
+      purchased_at: "2023-05-17T08:42:25.253Z",
+      role: "Manager",
+      account_id: "1234XYZ",
+      company_name: "Acme Corp",
+      renewal_date: "2023-05-17T08:42:25.253Z",
+    },
+  });
+};
+
+  const addProduct = async (product) => {
     dispatch(addCart(product));
+    await handleIdentify();
   };
 
   useEffect(() => {
