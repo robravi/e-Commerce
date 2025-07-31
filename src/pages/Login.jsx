@@ -17,7 +17,7 @@ function generateUniqueRandomString(length = 16) {
 }
 
 const handleIdentify = () => {  // ✅ Fixed function syntax (was incorrect)
-  console.log("coming here");
+  console.log("coming here" );
   const id = generateUniqueRandomString(10);
   console.log("id", id);
 
