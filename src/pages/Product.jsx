@@ -49,8 +49,9 @@ const handleIdentify = () => {  // ✅ Fixed function syntax (was incorrect)
 };
 
   const addProduct = async (product) => {
+     const tes = await handleIdentify();
+    console.log("test",tes)
     dispatch(addCart(product));
-    await handleIdentify();
   };
 
   useEffect(() => {
