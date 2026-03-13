@@ -22,66 +22,19 @@
 
 <!-- Start of  DEv Uzera  Code Snippet -->
 
-<!-- Start of Uzera Code Snippet -->
-<!-- Start of Uzera Code Snippet -->
+
 <!-- Start of Uzera Code Snippet -->
 <!-- <script>
 (function(u,z,a){if(u["a_id"]){return;}u["a_id"]=a;u["dm"]=u.location.hostname;u.uzera=u.uzera||[];u.uzera.q=u.uzera.q||[];['identify','trackEvent'].forEach(function(m){u.uzera[m]=function(){u.uzera.q.push([m,arguments]);};});var s=z.createElement("script");s.async=true;s.src="https://assets.gainserv.in/wrapper.dev.js?v=";var t=z.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);})(window,document,"70ADZ3DMQE")
 </script> -->
 <!-- End of Uzera Code Snippet -->
-<!-- End of Uzera Code Snippet -->
-<!-- End of Uzera Code Snippet -->
 
-    <script>
-(function() {
-  var hostname = window.location.hostname;
-  var scripts = [];
-
-  // Dev - .in domain
-  if (hostname.includes('gainserv.in')) {
-    scripts.push({
-      id: "70ADZ3DMQE",
-      src: "https://assets.gainserv.in/wrapper.dev.js"
-    });
-  }
-
-  // QA/Staging - .com domain
-  if (hostname.includes('gainserv.com')) {
-    scripts.push({
-      id: "WNLLAN2D1G",
-      src: "https://assets.gainserv.com/wrapper.net.min.js"
-    });
-  }
-
-  // Production - uzera.com
-  if (hostname.includes('uzera.com')) {
-    scripts.push({
-      id: "LZZMHFDT1H",
-      src: "https://assets.uzera.com/wrapper.min.js"
-    });
-  }
-
-  scripts.forEach(function(config) {
-    (function(u, z, a) {
-      if (u["a_id"]) return;
-      u["a_id"] = a;
-      u["dm"] = u.location.hostname;
-      u.uzera = u.uzera || [];
-      u.uzera.q = u.uzera.q || [];
-      ['identify', 'trackEvent'].forEach(function(m) {
-        u.uzera[m] = function() {
-          u.uzera.q.push([m, arguments]);
-        };
-      });
-      var s = z.createElement("script");
-      s.async = true;
-      s.src = config.src;
-      var t = z.getElementsByTagName("script")[0];
-      t.parentNode.insertBefore(s, t);
-    })(window, document, config.id);
-  });
-})();
+<!-- Start of Uzera Code Snippet -->
+<script>
+(function(u,z,a){if(u["a_id"]){return;}u["a_id"]=a;u["dm"]=u.location.hostname;u.uzera=u.uzera||[];u.uzera.q=u.uzera.q||[];['identify','trackEvent'].forEach(function(m){u.uzera[m]=function(){u.uzera.q.push([m,arguments]);};});var s=z.createElement("script");s.async=true;s.src="https://assets.gainserv.com/wrapper.net.min.js";var t=z.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);})(window,document,"WNLLAN2D1G")
 </script>
+<!-- End of Uzera Code Snippet -->
+
 
 <!-- End of Dev Uzera Code Snippet -->
 
